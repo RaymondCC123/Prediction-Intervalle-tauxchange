@@ -5,3 +5,8 @@ Nous envisageons de créer une application qui peut prévoir une intervalle des 
 
 
 We plan to create an application that can predict a currency-exchange rate interval of the targeted currency for the next quarter from the last GDP, by analyzing the old rate-exchange & GDP data.
+
+
+
+case study :
+https://aws.amazon.com/solutions/case-studies/localytics/
