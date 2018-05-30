@@ -15,6 +15,8 @@ https://aws.amazon.com/solutions/case-studies/localytics/
 
 
 Design Patterns :
+
 1. Request/Response :
 European Central Bank : request for EUR/USD exchange rate data
 Federal reserve bank : request for GDP data
+model : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestResponse
