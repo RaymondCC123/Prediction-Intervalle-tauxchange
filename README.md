@@ -10,3 +10,12 @@ We plan to create an application that can predict a currency-exchange rate inter
 
 case study :
 https://aws.amazon.com/solutions/case-studies/localytics/
+
+
+
+
+Design Patterns :
+
+1. Request/Response :
+European Central Bank : request for EUR/USD exchange rate data
+Federal reserve bank : request for GDP data
