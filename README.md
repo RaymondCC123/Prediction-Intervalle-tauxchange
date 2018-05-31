@@ -23,3 +23,7 @@ European Central Bank : request for EUR/USD exchange rate data
 Federal reserve bank : request for GDP data
 
 model : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestResponse
+
+2. Media Type Negotiation :
+
+We choose the response of our data in json
