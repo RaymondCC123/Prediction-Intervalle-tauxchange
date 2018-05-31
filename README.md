@@ -16,7 +16,7 @@ https://aws.amazon.com/solutions/case-studies/localytics/
 
 Design Patterns :
 
-1. Request/Response :
+1. Request/Acknowledge : ????
 
 European Central Bank : request for EUR/USD exchange rate data
 
