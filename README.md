@@ -27,3 +27,5 @@ model : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestRe
 2. Media Type Negotiation :
 
 We choose the response of our data in json
+
+Content Negotiation --> Server-Driven Negotiation --> Accept Request Header
