@@ -2,8 +2,7 @@ import requests
 import json
 import csv
 
-### API : PIB of the US
-
+# API : PIB US
 url = "https://api.stlouisfed.org/fred/series/observations?" \
       "series_id=GDP&api_key=09cefe3ef92e58d279f3d34f776aa262&" \
       "file_type=json&" \
@@ -12,7 +11,7 @@ url = "https://api.stlouisfed.org/fred/series/observations?" \
       "frequency=q"
 r = requests.get(url)
 
-print(json.dumps(r.json()["observations"], indent=4, sort_keys=True))
+# print(json.dumps(r.json()["observations"], indent=4, sort_keys=True))
 
 with open('/Users/laurence/devisePIB/pib_US_Billions of Dollars_fed_reserve.csv', 'w') as csvfile:
     f = csv.writer(csvfile, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -22,6 +21,19 @@ with open('/Users/laurence/devisePIB/pib_US_Billions of Dollars_fed_reserve.csv'
         f.writerow([x["date"],
                     x["value"]])
 
+
+def dernier_pib_us():
+    url1 = "https://api.stlouisfed.org/fred/series/observations?" \
+           "series_id=GDP&api_key=09cefe3ef92e58d279f3d34f776aa262&" \
+           "file_type=json&" \
+           "observation_start=2018-01-01&" \
+           "frequency=q"
+    r1 = requests.get(url1)
+    date1 = r1.json()["observations"][0]["date"]
+    value1 = r1.json()["observations"][0]["value"]
+    return value1
+
+
 ###
 ###
 ###
@@ -30,8 +42,7 @@ with open('/Users/laurence/devisePIB/pib_US_Billions of Dollars_fed_reserve.csv'
 ###
 
 
-### API : PIB of the EuroArea
-
+# API : PIB of the EuroArea
 url = "https://api.stlouisfed.org/fred/series/observations?" \
       "series_id=EUNNGDP&" \
       "api_key=09cefe3ef92e58d279f3d34f776aa262&" \
@@ -41,7 +52,7 @@ url = "https://api.stlouisfed.org/fred/series/observations?" \
       "frequency=q"
 r = requests.get(url)
 
-print(json.dumps(r.json()["observations"], indent=4, sort_keys=True))
+# print(json.dumps(r.json()["observations"], indent=4, sort_keys=True))
 
 with open('/Users/laurence/devisePIB/pib_EuroArea_Millions of Euros_fed_reserve.csv', 'w') as csvfile:
     f = csv.writer(csvfile, delimiter=';', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -51,24 +62,15 @@ with open('/Users/laurence/devisePIB/pib_EuroArea_Millions of Euros_fed_reserve.
         f.writerow([x["date"],
                     x["value"]])
 
-### method alternative
 
-# from fredapi import Fred
-# from pprint import pprint
-#
-# fr = Fred(api_key='09cefe3ef92e58d279f3d34f776aa262')  ### insert api key here
-#
-# data = fr.get_series_latest_release(series_id='GDP')
-# pprint(data)
-# # pprint(data.index)
-# # pprint(data.values)
-# # pprint(type(data))
-# data.to_csv('/Users/laurence/devisePIB/pib_US_Billions of Dollars.csv', mode='w', sep=';', decimal='.')
-#
-# data = fr.get_series_latest_release(series_id='EUNNGDP')
-# pprint(data)
-# data.to_csv('/Users/laurence/devisePIB/pib_EuroArea_Millions of Euros.csv', mode='w', sep=';', decimal='.')
-#
-# data = fr.get_series_latest_release(series_id='CHNGDPNQDSMEI')
-# pprint(data)
-# data.to_csv('/Users/laurence/devisePIB/pib_China_Billions of Chinese Yuans.csv', mode='w', sep=';', decimal='.')
+def dernier_pib_euro():
+    url2 = "https://api.stlouisfed.org/fred/series/observations?" \
+           "series_id=CLVMEURSCAB1GQEA19&" \
+           "api_key=09cefe3ef92e58d279f3d34f776aa262&" \
+           "file_type=json&" \
+           "observation_start=2018-01-01&" \
+           "frequency=q"
+    r2 = requests.get(url2)
+    date2 = r2.json()["observations"][0]["date"]
+    value2 = r2.json()["observations"][0]["value"]
+    return value2
