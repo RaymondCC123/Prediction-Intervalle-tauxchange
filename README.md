@@ -8,24 +8,26 @@ We plan to create an application that can predict a currency-exchange rate inter
 
 
 
-case study :
-https://aws.amazon.com/solutions/case-studies/localytics/
 
 
 
 
-Design Patterns :
 
-1. Request/Acknowledge : ????
 
-European Central Bank : request for EUR/USD exchange rate data
 
-Federal reserve bank : request for GDP data
 
-model : http://www.servicedesignpatterns.com/ClientServiceInteractions/RequestResponse
+Services web tiers :
+1.	FRED Economic Data API
+2.	European Central Bank SDMX 2.1 RESTful web service API
+3.	AWS API Gateway
+4.	AWS Dynamo DB
+5.	AWS Lambda Function
+6.	Plotly REST API
 
-2. Media Type Negotiation :
+Design patterns :
+1.	Media Type Negotiation
+2.	Service Descriptor
+3.	Service Interceptor
+4.	Linked Service
 
-We choose the response of our data in json
 
-Content Negotiation --> Server-Driven Negotiation --> Accept Request Header
